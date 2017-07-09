@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyVolleySample</string>
+    <string name="error">Error</string>
+    <string name="please_try_again">Please try again</string>
+    <string name="no_pressure_data">No pressure data is available</string>
+    <string name="msg_pressure_saved">Pressures saved successfully.</string>
+</resources>
