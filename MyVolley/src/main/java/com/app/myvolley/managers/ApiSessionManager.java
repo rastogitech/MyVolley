@@ -1,10 +1,10 @@
-package com.myvolley.managers;
+package com.app.myvolley.managers;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import com.myvolley.models.AuthToken;
+import com.app.myvolley.models.AuthToken;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.

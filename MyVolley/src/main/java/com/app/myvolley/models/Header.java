@@ -1,6 +1,4 @@
-package com.myvolley.listeners;
-
-import com.android.volley.NetworkResponse;
+package com.app.myvolley.models;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.
@@ -17,7 +15,28 @@ import com.android.volley.NetworkResponse;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public interface ResponseListener<R> {
+public class Header {
 
-    void onResponse(R response, NetworkResponse networkResponse);
+    private String name;
+    private String value;
+
+
+    public String getName() {
+        return name;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getValue() {
+        return value;
+    }
+
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }

@@ -1,4 +1,4 @@
-package com.myvolley.requests;
+package com.app.myvolley.requests;
 
 import android.text.TextUtils;
 
@@ -8,12 +8,12 @@ import com.android.volley.ParseError;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
+import com.app.myvolley.listeners.ApiCallback;
+import com.app.myvolley.managers.ApiManager;
+import com.app.myvolley.util.ApiLogger;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.myvolley.listeners.ApiCallback;
-import com.myvolley.managers.ApiManager;
-import com.myvolley.util.ApiLogger;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;

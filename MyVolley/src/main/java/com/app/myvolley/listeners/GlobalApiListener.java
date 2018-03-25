@@ -1,4 +1,6 @@
-package com.myvolley.models;
+package com.app.myvolley.listeners;
+
+import com.android.volley.Response;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.
@@ -15,28 +17,5 @@ package com.myvolley.models;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class Header {
-
-    private String name;
-    private String value;
-
-
-    public String getName() {
-        return name;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public String getValue() {
-        return value;
-    }
-
-
-    public void setValue(String value) {
-        this.value = value;
-    }
+public interface GlobalApiListener<R> extends ResponseListener<R>, Response.ErrorListener {
 }

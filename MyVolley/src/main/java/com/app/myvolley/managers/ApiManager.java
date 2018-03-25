@@ -1,4 +1,4 @@
-package com.myvolley.managers;
+package com.app.myvolley.managers;
 
 import android.content.Context;
 
@@ -7,10 +7,10 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.Volley;
-import com.myvolley.listeners.GlobalApiListener;
-import com.myvolley.models.AuthToken;
-import com.myvolley.requests.ApiRequest;
-import com.myvolley.util.ApiLogger;
+import com.app.myvolley.listeners.GlobalApiListener;
+import com.app.myvolley.models.AuthToken;
+import com.app.myvolley.requests.ApiRequest;
+import com.app.myvolley.util.ApiLogger;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.

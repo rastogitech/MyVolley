@@ -1,6 +1,4 @@
-package com.myvolley.listeners;
-
-import com.android.volley.Response;
+package com.app.myvolley.models;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.
@@ -17,5 +15,29 @@ import com.android.volley.Response;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public interface GlobalApiListener<R> extends ResponseListener<R>, Response.ErrorListener {
+public class AuthToken {
+
+    private String key;
+    private String token;
+
+    public AuthToken(String key, String token) {
+        this.key = key;
+        this.token = token;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 }

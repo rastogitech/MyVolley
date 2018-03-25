@@ -1,9 +1,9 @@
-package com.myvolley.managers;
+package com.app.myvolley.managers;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.myvolley.listeners.ApiCallback;
+import com.app.myvolley.listeners.ApiCallback;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

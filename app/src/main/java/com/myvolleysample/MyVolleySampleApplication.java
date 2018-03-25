@@ -2,7 +2,7 @@ package com.myvolleysample;
 
 import android.app.Application;
 
-import com.myvolley.managers.ApiManager;
+import com.app.myvolley.managers.ApiManager;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.

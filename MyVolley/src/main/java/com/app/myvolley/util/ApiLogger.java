@@ -1,4 +1,4 @@
-package com.myvolley.util;
+package com.app.myvolley.util;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.myvolley.requests.ApiRequest;
+import com.app.myvolley.requests.ApiRequest;
 
 import java.lang.reflect.Type;
 

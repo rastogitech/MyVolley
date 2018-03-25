@@ -1,10 +1,10 @@
-package com.myvolley.listeners;
+package com.app.myvolley.listeners;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.myvolley.managers.ApiManager;
-import com.myvolley.util.ApiLogger;
+import com.app.myvolley.managers.ApiManager;
+import com.app.myvolley.util.ApiLogger;
 
 /**
  * Copyright 2017 Rahul Rastogi. All Rights Reserved.
