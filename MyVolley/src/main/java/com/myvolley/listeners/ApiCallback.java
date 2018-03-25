@@ -1,13 +1,13 @@
-package com.myvolleylib.listeners;
+package com.myvolley.listeners;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.myvolleylib.managers.ApiManager;
-import com.myvolleylib.util.ApiLogger;
+import com.myvolley.managers.ApiManager;
+import com.myvolley.util.ApiLogger;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

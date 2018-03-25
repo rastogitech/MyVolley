@@ -3,7 +3,7 @@ package com.myvolleysample;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

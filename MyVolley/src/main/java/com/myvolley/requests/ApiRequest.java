@@ -1,4 +1,4 @@
-package com.myvolleylib.requests;
+package com.myvolley.requests;
 
 import android.text.TextUtils;
 
@@ -11,9 +11,9 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.myvolleylib.listeners.ApiCallback;
-import com.myvolleylib.managers.ApiManager;
-import com.myvolleylib.util.ApiLogger;
+import com.myvolley.listeners.ApiCallback;
+import com.myvolley.managers.ApiManager;
+import com.myvolley.util.ApiLogger;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,12 +35,12 @@ import java.util.Map;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GsonRequest extends com.android.volley.Request {
+public class ApiRequest extends com.android.volley.Request {
 
     /**
      * Default charset for JSON request.
      */
-    protected static final String PROTOCOL_CHARSET = "utf-8";
+    private static final String PROTOCOL_CHARSET = "utf-8";
 
     /**
      * Content type for request.
@@ -57,9 +57,9 @@ public class GsonRequest extends com.android.volley.Request {
     private Type mResponseType;
     private ApiCallback mApiCallback;
 
-    public <Request, Response> GsonRequest(int method, String url, Request requestObject,
-                                           TypeToken<Response> typeToken,
-                                           ApiCallback<Response> apiCallback) {
+    public <Request, Response> ApiRequest(int method, String url, Request requestObject,
+                                          TypeToken<Response> typeToken,
+                                          ApiCallback<Response> apiCallback) {
         super(method, url, apiCallback);
         mUrl = url;
         mRequestBody = null != requestObject ? mGson.toJson(requestObject) : null;
@@ -69,9 +69,9 @@ public class GsonRequest extends com.android.volley.Request {
         mApiCallback = apiCallback;
     }
 
-    public <RequestType, ResponseType> GsonRequest(int method, String url, RequestType requestObject,
-                                                   Class<ResponseType> responseClass,
-                                                   ApiCallback<ResponseType> apiCallback) {
+    public <RequestType, ResponseType> ApiRequest(int method, String url, RequestType requestObject,
+                                                  Class<ResponseType> responseClass,
+                                                  ApiCallback<ResponseType> apiCallback) {
         super(method, url, apiCallback);
         mUrl = url;
         mRequestBody = null != requestObject ? mGson.toJson(requestObject) : null;

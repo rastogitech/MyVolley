@@ -1,11 +1,9 @@
-package com.myvolleysample;
+package com.myvolley.listeners;
 
-import android.app.Application;
-
-import com.myvolleylib.managers.ApiManager;
+import com.android.volley.Response;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,21 +17,5 @@ import com.myvolleylib.managers.ApiManager;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class MyVolleySampleApp extends Application {
-
-    private static MyVolleySampleApp sInstance;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        sInstance = this;
-
-        //Initialization ApiManager is must, only once in app-lifetime.
-        ApiManager.getInstance().init(this);
-    }
-
-    public static MyVolleySampleApp getInstance() {
-        return sInstance;
-    }
-
+public interface GlobalApiListener<R> extends ResponseListener<R>, Response.ErrorListener {
 }

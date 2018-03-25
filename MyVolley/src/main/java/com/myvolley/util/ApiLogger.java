@@ -1,4 +1,4 @@
-package com.myvolleylib.util;
+package com.myvolley.util;
 
 import android.util.Log;
 
@@ -6,14 +6,14 @@ import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.myvolleylib.requests.GsonRequest;
+import com.myvolley.requests.ApiRequest;
 
 import java.lang.reflect.Type;
 
 /**
- * @author rahul rastogi
- *         <p/>
- *         Performs some logging operations.
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
+ * <p/>
+ * Performs some logging operations.
  */
 public class ApiLogger {
 
@@ -35,11 +35,11 @@ public class ApiLogger {
 
         String body = null;
 
-        if (request instanceof GsonRequest) {
-            GsonRequest gsonRequest = (GsonRequest) request;
+        if (request instanceof ApiRequest) {
+            ApiRequest apiRequest = (ApiRequest) request;
 
-            if (null != gsonRequest.getBody()) {
-                body = new String(gsonRequest.getBody());
+            if (null != apiRequest.getBody()) {
+                body = new String(apiRequest.getBody());
             }
         } else {
             try {

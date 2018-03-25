@@ -1,9 +1,9 @@
-package com.myvolleylib.managers;
+package com.myvolley.managers;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.myvolleylib.listeners.ApiCallback;
+import com.myvolley.listeners.ApiCallback;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

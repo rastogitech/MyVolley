@@ -1,4 +1,4 @@
-package com.myvolleylib.managers;
+package com.myvolley.managers;
 
 import android.content.Context;
 
@@ -7,13 +7,13 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.Volley;
-import com.myvolleylib.models.AuthToken;
-import com.myvolleylib.requests.GsonRequest;
-import com.myvolleylib.util.ApiLogger;
-import com.myvolleylib.listeners.GlobalApiListener;
+import com.myvolley.listeners.GlobalApiListener;
+import com.myvolley.models.AuthToken;
+import com.myvolley.requests.ApiRequest;
+import com.myvolley.util.ApiLogger;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -120,9 +120,9 @@ public class ApiManager {
         //Adding session details.
         AuthToken authToken = ApiSessionManager.getAuthToken();
 
-        if (withSession && null != authToken && request instanceof GsonRequest) {
+        if (withSession && null != authToken && request instanceof ApiRequest) {
 
-            ((GsonRequest) request).addHeader(authToken.getKey(), authToken.getToken());
+            ((ApiRequest) request).addHeader(authToken.getKey(), authToken.getToken());
         }
 
         ApiLogger.logRequest(request);

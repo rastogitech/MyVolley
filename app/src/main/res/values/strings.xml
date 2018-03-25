@@ -4,4 +4,6 @@
     <string name="please_try_again">Please try again</string>
     <string name="no_pressure_data">No pressure data is available</string>
     <string name="msg_pressure_saved">Pressures saved successfully.</string>
+    <string name="ok">OK</string>
+    <string name="msg_request_warning">Please open file MainActivity and modify url, method type, request model and response models to test working of MyVolley library.\nFor any query email at rastogi.tech@gmail.com Thanks!</string>
 </resources>

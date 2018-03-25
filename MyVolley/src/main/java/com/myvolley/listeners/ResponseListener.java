@@ -1,7 +1,9 @@
-package com.myvolleylib.models;
+package com.myvolley.listeners;
+
+import com.android.volley.NetworkResponse;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,29 +17,7 @@ package com.myvolleylib.models;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class AuthToken {
+public interface ResponseListener<R> {
 
-    private String key;
-    private String token;
-
-    public AuthToken(String key, String token) {
-        this.key = key;
-        this.token = token;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
+    void onResponse(R response, NetworkResponse networkResponse);
 }

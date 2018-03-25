@@ -1,7 +1,11 @@
-package com.myvolleylib.models;
+package com.myvolleysample;
+
+import android.app.Application;
+
+import com.myvolley.managers.ApiManager;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,28 +19,21 @@ package com.myvolleylib.models;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class Header {
+public class MyVolleySampleApplication extends Application {
 
-    private String name;
-    private String value;
+    private static MyVolleySampleApplication sInstance;
 
-
-    public String getName() {
-        return name;
+    public static MyVolleySampleApplication getInstance() {
+        return sInstance;
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        sInstance = this;
 
-    public void setName(String name) {
-        this.name = name;
+        //Initialization ApiManager is must, only once in app-lifetime.
+        ApiManager.getInstance().init(this);
     }
 
-
-    public String getValue() {
-        return value;
-    }
-
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }

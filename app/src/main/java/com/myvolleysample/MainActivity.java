@@ -2,6 +2,7 @@ package com.myvolleysample;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -9,14 +10,14 @@ import android.widget.Toast;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.myvolleylib.listeners.ApiCallback;
-import com.myvolleylib.requests.GsonRequest;
+import com.myvolley.listeners.ApiCallback;
+import com.myvolley.requests.ApiRequest;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Copyright 2017 Rahul Rastogi
+ * Copyright 2017 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,31 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mResponseTV;
     private ProgressDialog progressDialog;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mResponseTV = (TextView) findViewById(R.id.tv_response);
-        progressDialog = new ProgressDialog(this);
-
-        //sendGetRequest();
-    }
-
-
     /**
-     * Sending GET request
+     * A callback class must be implemented in order to get response of API call. onResponse() and onError()
+     * methods will be called according to success/failure of request.
      */
-    private void sendGetRequest() {
-        String getUrl = null;//TODO: add your url here.
-        progressDialog.show();
-
-        GsonRequest gsonRequest = new GsonRequest(Request.Method.GET, getUrl, null, PressureListResponse.class,
-                mGetPressureListCallback);
-        gsonRequest.execute();
-    }
-
-
     private ApiCallback<PressureListResponse> mGetPressureListCallback
             = new ApiCallback<PressureListResponse>() {
 
@@ -81,31 +61,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, R.string.please_try_again, Toast.LENGTH_SHORT).show();
         }
     };
-
-
     /**
-     * Sending POST request
+     * A callback class must be implemented in order to get response of API call. onResponse() and onError()
+     * methods will be called according to success/failure of request.
      */
-    private void sendPostRequest() {
-        progressDialog.show();
-
-        Pressure pressure = new Pressure();
-        pressure.setId(1);
-        pressure.setDate("2017-07-03T09:56:11.7640232+05:30");
-        pressure.setPressures(new double[]{1, 2, 3, 4, 5});
-
-        List<Pressure> pressureList = new ArrayList<>();
-        pressureList.add(pressure);
-
-        String postUrl = null;//TODO: add your URL here.
-        progressDialog.show();
-
-        GsonRequest gsonRequest = new GsonRequest(Request.Method.POST, postUrl, pressureList,
-                BaseResponse.class, mPostPressureCallback);
-        gsonRequest.execute();
-    }
-
-
     private ApiCallback<BaseResponse> mPostPressureCallback = new ApiCallback<BaseResponse>() {
         @Override
         public void onResponse(BaseResponse response, NetworkResponse networkResponse) {
@@ -122,6 +81,59 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, R.string.please_try_again, Toast.LENGTH_SHORT).show();
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mResponseTV = (TextView) findViewById(R.id.tv_response);
+        progressDialog = new ProgressDialog(this);
+
+        //sendGetRequest();
+
+        AlertDialog warningDialog = new AlertDialog.Builder(this)
+                .setMessage(R.string.msg_request_warning)
+                .setPositiveButton(R.string.ok, null)
+                .setCancelable(false).create();
+        warningDialog.setCanceledOnTouchOutside(false);
+        warningDialog.show();
+    }
+
+    /**
+     * Sending GET request
+     */
+    private void sendGetRequest() {
+        //TODO: add your url here.
+        String getUrl = null;
+        progressDialog.show();
+
+        ApiRequest apiRequest = new ApiRequest(Request.Method.GET, getUrl, null,
+                PressureListResponse.class, mGetPressureListCallback);
+        apiRequest.execute();
+    }
+
+    /**
+     * Sending POST request
+     */
+    private void sendPostRequest() {
+        progressDialog.show();
+
+        Pressure pressure = new Pressure();
+        pressure.setId(1);
+        pressure.setDate("2017-07-03T09:56:11.7640232+05:30");
+        pressure.setPressures(new double[]{1, 2, 3, 4, 5});
+
+        List<Pressure> pressureList = new ArrayList<>();
+        pressureList.add(pressure);
+
+        //TODO: add your URL here.
+        String postUrl = null;
+        progressDialog.show();
+
+        ApiRequest apiRequest = new ApiRequest(Request.Method.POST, postUrl, pressureList,
+                BaseResponse.class, mPostPressureCallback);
+        apiRequest.execute();
+    }
 
 
 }
