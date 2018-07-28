@@ -1,16 +1,19 @@
-package com.myvolleysample;
+package com.myvolleysample.models
 
-import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.SerializedName
 
 /**
- * Copyright 2017 Rahul Rastogi. All Rights Reserved.
- * <p>
+ * Copyright 2018 Rahul Rastogi. All Rights Reserved.
+ *
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * <p>
+ *
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -18,27 +21,11 @@ import com.google.gson.annotations.SerializedName;
  * limitations under the License.
  */
 
-public class BaseResponse {
+open class BaseResponse {
 
     @SerializedName("Code")
-    private int status;
+    var status: Int = 0
 
     @SerializedName("Message")
-    private String message;
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
+    var message: String? = null
 }

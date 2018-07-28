@@ -1,9 +1,9 @@
-package com.app.myvolley.listeners;
+package com.myvolley.listeners
 
-import com.android.volley.NetworkResponse;
+import com.myvolley.models.ApiError
 
 /**
- * Copyright 2017 Rahul Rastogi. All Rights Reserved.
+ * Copyright 2018 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,14 @@ import com.android.volley.NetworkResponse;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Interface definition for a callback to be invoked when API response is received.
+ *
  */
-public interface ResponseListener<R> {
+interface ApiErrorListener {
 
-    void onResponse(R response, NetworkResponse networkResponse);
+    /**
+     *@param error, holds API failure details.
+     */
+    fun onErrorResponse(error: ApiError)
 }

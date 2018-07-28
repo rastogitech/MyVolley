@@ -1,11 +1,7 @@
-package com.myvolleysample;
-
-import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
+package com.myvolley.models
 
 /**
- * Copyright 2017 Rahul Rastogi. All Rights Reserved.
+ * Copyright 2018 Rahul Rastogi. All Rights Reserved.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +14,11 @@ import java.util.List;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Represents authentication tokenValue details.
  */
-public class PressureListResponse extends BaseResponse {
-
-    @SerializedName("Result")
-    private List<Pressure> pressureList;
-
-    public List<Pressure> getPressureList() {
-        return pressureList;
+data class AuthToken(var tokenKey: String, var tokenValue: String) : Cloneable {
+    public override fun clone(): Any {
+        return super.clone()
     }
-
-    public void setPressureList(List<Pressure> pressureList) {
-        this.pressureList = pressureList;
-    }
-
 }
