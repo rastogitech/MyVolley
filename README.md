@@ -38,7 +38,6 @@ Suppose, you want to call an API which returns Json object in response which mig
 
 So, for this this type of response you need to create two model classes. First is for the Json objects which are coming in list i.e.
 `class Student {`
-
     `@SerializedName("Id")`
     `var id: Int = 0`
 
@@ -49,7 +48,6 @@ So, for this this type of response you need to create two model classes. First i
 And main class is to wrap up the Json array of type Student, status and message properties i.e.
 
 class StudentListResponse {
-
     @SerializedName("Result")
     var studentList: List<Student>? = null
     
@@ -102,7 +100,6 @@ Let's suppose we want to save a Student object on server. For this, request Json
 Corresponding class for above Json will be:
 
 `class Student {`
-
     `@SerializedName("Id")`
     `var id: Int = 0`
 
@@ -120,7 +117,6 @@ And if response json is:
 Related class for above response may be:
 
 class BaseResponse {
-
     @SerializedName("Status")
     var status: Boolean = false
 
@@ -151,6 +147,7 @@ Now, prepare a callback to receive response/error of API call:
     `}`
 
 **Finally, POST request for saving Student object will look like:**
+    
     `val student = Student()`
     `student.id = 1`
     `student.name = "Allen Solly"`
