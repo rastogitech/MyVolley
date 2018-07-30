@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 
 ext {
     bintrayRepo = 'maven'  // this is the same as whatever you called your repository in Bintray
-    bintrayName = 'MyVolley-Kotlin' // your bintray package name. I am calling it the same as my library name.
+    bintrayName = 'MyVolley' // your bintray package name. I am calling it the same as my library name.
 
     publishedGroupId = 'com.myvolley'
-    libraryName = 'MyVolley-Kotlin'
-    artifact = 'MyVolley-Kotlin' // I'm calling it the same as my library name
+    libraryName = 'MyVolley'
+    artifact = 'MyVolley' // I'm calling it the same as my library name
 
     libraryDescription = 'This library makes easy to send network requests having Json data with java/kotlin objects directly without requiring any manual conversion from Java/Kotlin objects to json. You can send Multipart/form-data request too using this library. This library uses Volley library internally to send network requests.'
 

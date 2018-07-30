@@ -20,9 +20,11 @@ import com.google.gson.annotations.SerializedName
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-class PressureListResponse : BaseResponse() {
+class Student {
 
-    @SerializedName("Result")
-    var pressureList: List<Pressure>? = null
+    @SerializedName("Id")
+    var id: Int = 0
 
+    @SerializedName("Name")
+    var name: String? = null
 }

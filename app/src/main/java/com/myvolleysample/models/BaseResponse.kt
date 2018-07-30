@@ -24,7 +24,7 @@ import com.google.gson.annotations.SerializedName
 open class BaseResponse {
 
     @SerializedName("Code")
-    var status: Int = 0
+    var status: Boolean = false
 
     @SerializedName("Message")
     var message: String? = null
