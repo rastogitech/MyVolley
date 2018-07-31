@@ -93,7 +93,7 @@ object ApiManager {
 
         if (withSession && null != authToken) {
             when (request) {
-                is ApiRequest<*, *> -> request.addHeader(authToken.tokenKey, authToken.tokenValue)
+                is ApiRequest<*> -> request.addHeader(authToken.tokenKey, authToken.tokenValue)
                 is MultipartRequest -> request.addHeader(authToken.tokenKey, authToken.tokenValue)
             }
         }

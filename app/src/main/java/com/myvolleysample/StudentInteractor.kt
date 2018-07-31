@@ -35,8 +35,8 @@ class StudentInteractor {
      */
     fun getStudentList(callback: ApiCallback<StudentListResponse>) {
         val getStudentListUrl = "" //TODO: edit url here
-        val apiRequest = ApiRequest(ApiRequest.GET, getStudentListUrl, null,
-                StudentListResponse::class.java, callback)
+
+        val apiRequest = ApiRequest(ApiRequest.GET, getStudentListUrl, null, StudentListResponse::class.java, callback)
         apiRequest.execute()
     }
 

@@ -37,7 +37,7 @@ object ApiLogger {
 
         var body: String? = null
 
-        if (request is ApiRequest<*, *>) {
+        if (request is ApiRequest<*>) {
             if (null != request.body) {
                 body = String(request.body!!)
             }

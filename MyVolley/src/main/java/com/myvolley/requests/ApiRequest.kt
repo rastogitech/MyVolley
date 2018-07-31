@@ -39,7 +39,7 @@ import java.util.*
  * A request for retrieving a ResponseType type response by hitting a given URL with optional
  * RequestType data.
  */
-class ApiRequest<RequestType, ResponseType> : com.android.volley.Request<ResponseType>, NetworkRequestType {
+class ApiRequest<ResponseType> : com.android.volley.Request<ResponseType>, NetworkRequestType {
 
     private val mGson = Gson()
     private val mUrl: String
@@ -51,20 +51,18 @@ class ApiRequest<RequestType, ResponseType> : com.android.volley.Request<Respons
     var mApiCallback: ApiCallback<ResponseType>? = null
     private var mUrlEncodedParams: Map<String, String>? = null
 
-    constructor(method: Int, url: String, requestObject: RequestType?,
-                typeToken: TypeToken<ResponseType>?,
-                apiCallback: ApiCallback<ResponseType>) : super(method, url, null) {
+    constructor(method: Int, url: String, requestObject: Any?,
+                typeToken: TypeToken<ResponseType>,
+                apiCallback: ApiCallback<ResponseType>?) : super(method, url, null) {
         mUrl = url
         mRequestBody = if (null != requestObject) mGson.toJson(requestObject) else null
-        if (null != typeToken) {
-            mResponseType = typeToken.type
-        }
+        mResponseType = typeToken.type
         mApiCallback = apiCallback
     }
 
-    constructor(method: Int, url: String, requestObject: RequestType?,
+    constructor(method: Int, url: String, requestObject: Any?,
                 responseClass: Class<ResponseType>,
-                apiCallback: ApiCallback<ResponseType>) : super(method, url, null) {
+                apiCallback: ApiCallback<ResponseType>?) : super(method, url, null) {
         mUrl = url
         mRequestBody = if (null != requestObject) mGson.toJson(requestObject) else null
         mResponseType = responseClass
