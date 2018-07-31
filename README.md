@@ -4,7 +4,7 @@ This library makes easy to send network requests having Json data with java/kotl
 **1. Add following two dependencies in your module's build.gradle file using:**
 
 `dependencies {`
-    `implementation 'com.myvolley:MyVolley-kotlin:1.0.2'`
+    `implementation 'com.myvolley:MyVolley:1.0.2'`
     `implementation 'com.android.volley:volley:1.1.0'`
     `implementation 'com.google.code.gson:gson:2.8.2'`
 `}`
