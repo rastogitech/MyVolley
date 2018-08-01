@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/rastogitech/MyVolley-Kotlin'
     gitUrl = 'https://github.com/rastogitech/MyVolley-Kotlin.git'
 
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.0.4'
 
     developerId = 'rastogitech'
     developerName = 'Rahul Rastogi'
@@ -34,7 +34,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.4"
     }
 
     buildTypes {
@@ -61,9 +61,7 @@ dependencies {
 }
 
 
-// Maven section
-// You shouldn't need to change anything. It just uses the
-// values you set above.
+// Maven section:
 
 apply plugin: 'com.github.dcendents.android-maven'
 

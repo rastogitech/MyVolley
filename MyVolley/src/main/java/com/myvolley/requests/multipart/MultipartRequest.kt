@@ -168,14 +168,24 @@ class MultipartRequest<ResponseType> : Request<ResponseType> {
     }
 
     override fun deliverResponse(response: ResponseType) {
-        if (null != mApiCallback) {
-            mApiCallback!!.onResponse(response, NetworkResult(mNetworkResponse!!))
+        val networkResult = NetworkResult(mNetworkResponse!!)
+
+        if (null != ApiManager.globalApiListener) {
+            ApiManager.globalApiListener?.onResponse(this, response, networkResult)
+
+        } else if (null != mApiCallback) {
+            mApiCallback!!.onResponse(response, networkResult)
         }
     }
 
     override fun deliverError(error: VolleyError) {
-        if (null != mApiCallback) {
-            mApiCallback!!.onErrorResponse(ApiError(error))
+        val apiError = ApiError(error)
+
+        if (null != ApiManager.globalApiListener) {
+            ApiManager.globalApiListener?.onErrorResponse(this, apiError)
+
+        } else if (null != mApiCallback) {
+            mApiCallback!!.onErrorResponse(apiError)
         }
     }
 

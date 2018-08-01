@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.myvolley</groupId>
   <artifactId>MyVolley</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>aar</packaging>
   <name>MyVolley</name>
   <description>This library makes easy to send network requests having Json data with java/kotlin objects directly without requiring any manual conversion from Java/Kotlin objects to json. You can send Multipart/form-data request too using this library. This library uses Volley library internally to send network requests.</description>
