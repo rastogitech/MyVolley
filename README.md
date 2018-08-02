@@ -1,4 +1,3 @@
-# MyVolley-Kotlin/Java
 This library makes easy to send network requests having Json data with java/kotlin objects directly without requiring any manual conversion from Java/Kotlin objects to json. You can send Multipart/form-data request too using this library. This library uses Volley library internally to send network requests.
 
 **1. Add following two dependencies in your module's build.gradle file using:**
@@ -20,7 +19,7 @@ Note that, if you face any error like: **More than one file was found with OS in
 
 
 **If you're coding in Java language then refer:**
-[Using MyVolley with Java](https://github.com/rastogitech/MyVolley-Kotlin/wiki/How-to-use-MyVolley-for-Android-(Using-Java))
+[Using MyVolley with Java](https://github.com/rastogitech/MyVolley-Kotlin/wiki/Java:-How-to-use-MyVolley-for-Android)
 
 **If you are coding in Kotlin language then refer:**
-[Using MyVolley with Kotlin](https://github.com/rastogitech/MyVolley-Kotlin/wiki/How-to-use-MyVolley-for-Android-(Using-Kotlin))
+[Using MyVolley with Kotlin](https://github.com/rastogitech/MyVolley-Kotlin/wiki/Kotlin:-How-to-use-MyVolley-for-Android)
