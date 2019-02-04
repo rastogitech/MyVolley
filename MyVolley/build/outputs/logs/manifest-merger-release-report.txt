@@ -1,47 +1,47 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
 	package
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:2:5-31
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:2:5-31
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:1-12:12
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:11-69
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:4:5-66
+ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:4:5-66
 	android:name
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:4:22-64
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:6:5-10:19
+ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:6:5-10:19
 	android:supportsRtl
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:8:9-35
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:8:9-35
 	android:allowBackup
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:7:9-35
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml:7:9-35
 uses-sdk
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		ADDED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
-		INJECTED from D:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		ADDED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml
+		INJECTED from E:\android_projects\MyVolleySample\MyVolley\src\main\AndroidManifest.xml

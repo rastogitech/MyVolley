@@ -97,8 +97,8 @@ class ApiRequest<ResponseType> : com.android.volley.Request<ResponseType>, Netwo
         var jsonString: String? = null
 
         try {
-            val charset: String = HttpHeaderParser.parseCharset(response.headers, Charsets.UTF_8.toString())
-            jsonString = String(response.data, Charset.forName(charset))
+            val charset: String = HttpHeaderParser.parseCharset(response.headers)
+            jsonString = String(response.data ?: ByteArray(0), Charset.forName(charset))
 
             var successResponse: com.android.volley.Response<ResponseType>? = null
 

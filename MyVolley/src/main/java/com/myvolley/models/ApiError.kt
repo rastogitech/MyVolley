@@ -12,21 +12,25 @@ class ApiError constructor(volleyError: VolleyError) : Exception(volleyError) {
 
     init {
         errorType = when (volleyError) {
+            is AuthFailureError -> AUTH_FAILURE_ERROR
             is NoConnectionError -> NO_CONNECTION_ERROR
             is TimeoutError -> TIMEOUT_ERROR
             is NetworkError -> NETWORK_ERROR
             is ClientError -> CLIENT_ERROR
             is ServerError -> SERVER_ERROR
+            is ParseError -> PARSE_ERROR
             else -> UNKNOWN_ERROR
         }
     }
 
     companion object {
+        const val AUTH_FAILURE_ERROR = "auth_failure_error"
         const val NO_CONNECTION_ERROR = "no_connection_error"
         const val TIMEOUT_ERROR = "timeout_error"
         const val NETWORK_ERROR = "network_error"
         const val CLIENT_ERROR = "client_error"
         const val SERVER_ERROR = "server_error"
+        const val PARSE_ERROR = "parse_error"
         const val UNKNOWN_ERROR = "unknown_error"
     }
 }
