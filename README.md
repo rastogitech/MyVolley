@@ -4,7 +4,7 @@ This library makes easy to send network requests having Json data with java/kotl
 **1. Add following two dependencies in your module's build.gradle file using:**
 
 `dependencies {`
-    `implementation 'com.myvolley:MyVolley:1.0.4'`
+    `implementation 'com.myvolley:MyVolley:1.0.6'`
     `implementation 'com.google.code.gson:gson:2.8.2'`
 `}`
 
@@ -155,3 +155,9 @@ Now, prepare a callback to receive response/error of API call:
 
     `val apiRequest = ApiRequest(ApiRequest.POST, saveStudentUrl, student, BaseResponse::class.java, callback)`
     `apiRequest.execute()`
+
+**If you're coding in Java language then refer:**
+[Using MyVolley with Java](https://github.com/rastogitech/MyVolley-Kotlin/wiki/Java:-How-to-use-MyVolley-for-Android)
+
+**If you are coding in Kotlin language then refer:**
+[Using MyVolley with Kotlin](https://github.com/rastogitech/MyVolley-Kotlin/wiki/Kotlin:-How-to-use-MyVolley-for-Android)
