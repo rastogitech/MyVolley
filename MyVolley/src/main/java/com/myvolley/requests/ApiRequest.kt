@@ -94,11 +94,15 @@ class ApiRequest<ResponseType> : com.android.volley.Request<ResponseType>, Netwo
     }
 
     override fun parseNetworkResponse(response: NetworkResponse): com.android.volley.Response<ResponseType>? {
+        mNetworkResponse = response
         var jsonString: String? = null
 
         try {
             val charset: String = HttpHeaderParser.parseCharset(response.headers)
             jsonString = String(response.data ?: ByteArray(0), Charset.forName(charset))
+
+            //Logging response
+            ApiLogger.logApiResponse<ResponseType>(mUrl, jsonString, response, mResponseType!!)
 
             var successResponse: com.android.volley.Response<ResponseType>? = null
 
@@ -106,11 +110,6 @@ class ApiRequest<ResponseType> : com.android.volley.Request<ResponseType>, Netwo
                 successResponse = com.android.volley.Response.success(mGson.fromJson<ResponseType>(jsonString, mResponseType),
                         HttpHeaderParser.parseCacheHeaders(response))
             }
-
-            mNetworkResponse = response
-
-            //Logging response
-            ApiLogger.logApiResponse<ResponseType>(mUrl, jsonString, response, mResponseType!!)
 
             return successResponse
 
