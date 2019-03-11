@@ -25,6 +25,13 @@ import com.myvolley.models.NetworkResult
 interface GlobalApiListener {
 
     /**
+     * This method gets called after we call {@link ApiRequest#execute()} method.
+     *
+     * @param request, API request which is to be executed
+     */
+    fun onRequestPreExecute(request: Request<*>)
+
+    /**
      * @param request, API request whose response is received.
      * @param response, response from API.
      * @param networkResult, contains network related details like: response headers, response code, API execution time (in Milliseconds)

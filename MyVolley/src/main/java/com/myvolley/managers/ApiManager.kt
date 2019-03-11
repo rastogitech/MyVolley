@@ -98,6 +98,8 @@ object ApiManager {
             }
         }
 
+        globalApiListener?.onRequestPreExecute(request)
+
         ApiLogger.logRequest(request)
         queue!!.add(request)
     }
