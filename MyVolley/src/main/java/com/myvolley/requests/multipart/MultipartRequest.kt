@@ -143,8 +143,7 @@ class MultipartRequest<ResponseType> : Request<ResponseType> {
         var jsonString: String? = null
 
         try {
-            val charset: String = HttpHeaderParser.parseCharset(response.headers,
-                    Charsets.UTF_8.toString())
+            val charset: String = HttpHeaderParser.parseCharset(response.headers, Charsets.UTF_8.name())
 
             jsonString = String(response.data, Charset.forName(charset))
             var successResponse: com.android.volley.Response<ResponseType>? = null
@@ -168,7 +167,7 @@ class MultipartRequest<ResponseType> : Request<ResponseType> {
     }
 
     override fun deliverResponse(response: ResponseType) {
-        val networkResult = NetworkResult(mNetworkResponse!!)
+        val networkResult = NetworkResult(mNetworkResponse)
 
         if (null != ApiManager.globalApiListener) {
             ApiManager.globalApiListener?.onResponse(this, response, networkResult)

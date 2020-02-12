@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/rastogitech/MyVolley-Kotlin'
     gitUrl = 'https://github.com/rastogitech/MyVolley-Kotlin.git'
 
-    libraryVersion = '1.0.8-beta-1'
+    libraryVersion = '1.0.9'
 
     developerId = 'rastogitech'
     developerName = 'Rahul Rastogi'
@@ -33,7 +33,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.8-beta-1"
+        versionName "1.0.9"
     }
 
     buildTypes {
@@ -54,7 +54,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     api 'com.android.volley:volley:1.1.1'
-    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation files('libs/httpmime-4.3.jar')
 }

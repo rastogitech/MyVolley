@@ -98,7 +98,7 @@ class ApiRequest<ResponseType> : com.android.volley.Request<ResponseType>, Netwo
         var jsonString: String? = null
 
         try {
-            val charset: String = HttpHeaderParser.parseCharset(response.headers)
+            val charset: String = HttpHeaderParser.parseCharset(response.headers, Charsets.UTF_8.name())
             jsonString = String(response.data ?: ByteArray(0), Charset.forName(charset))
 
             //Logging response
@@ -123,7 +123,7 @@ class ApiRequest<ResponseType> : com.android.volley.Request<ResponseType>, Netwo
     }
 
     override fun deliverResponse(response: ResponseType) {
-        val networkResult = NetworkResult(mNetworkResponse!!)
+        val networkResult = NetworkResult(mNetworkResponse)
 
         if (null != ApiManager.globalApiListener) {
             ApiManager.globalApiListener?.onResponse(this, response, networkResult)
