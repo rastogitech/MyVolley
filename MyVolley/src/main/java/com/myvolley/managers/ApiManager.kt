@@ -34,6 +34,7 @@ object ApiManager {
     private var defaultRequestQueue: RequestQueue? = null
     private var mDefaultRetryPolicy: RetryPolicy = DefaultRetryPolicy(INITIAL_TIMEOUT_MS, 0,
             DefaultRetryPolicy.DEFAULT_BACKOFF_MULT)
+
     /**
      * GlobalApiListener listens all the response and errors at first before the response or error is actually used
      */
@@ -43,7 +44,6 @@ object ApiManager {
      * This initializes the ApiManager with some basic details. Initialization should be done only once. Most of the
      * times from sub class of Application class.
      *
-     * @param defaultRequestQueue request queue to handle the cache and network requests
      * @param globalListener   listens all the response and error of all api calls before it is actually used
      */
     @JvmOverloads
@@ -98,9 +98,9 @@ object ApiManager {
             }
         }
 
-        globalApiListener?.onRequestPreExecute(request)
-
-        ApiLogger.logRequest(request)
-        queue!!.add(request)
+        globalApiListener?.onRequestPreExecute(request) {
+            ApiLogger.logRequest(request)
+            queue!!.add(request)
+        }
     }
 }

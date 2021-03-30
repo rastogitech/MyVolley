@@ -29,7 +29,7 @@ interface GlobalApiListener {
      *
      * @param request, API request which is to be executed
      */
-    fun onRequestPreExecute(request: Request<*>)
+    fun onRequestPreExecute(request: Request<*>, onPreExecuteCompletion: () -> Unit)
 
     /**
      * @param request, API request whose response is received.
